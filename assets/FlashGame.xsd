@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by AlexNeko (AlexNeko.org) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="FlashGame">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="DPad" type="DPad" minOccurs="0" maxOccurs="2"/>
+				<xs:element name="ButtonBar" type="ButtonBar" minOccurs="0" maxOccurs="2"/>
+			</xs:sequence>
+			<xs:attribute name="id" type="xs:integer" use="required"/>
+			<xs:attribute name="name" type="xs:string" use="required"/>
+		</xs:complexType>
+		<xs:key name="DPad_Pos_Key">
+			<xs:selector xpath="DPad"/>
+			<xs:field xpath="@position"/>
+		</xs:key>
+		<xs:key name="ButtonBar_Pos_Key">
+			<xs:selector xpath="ButtonBar"/>
+			<xs:field xpath="@position"/>
+		</xs:key>
+	</xs:element>
+	<xs:complexType name="Button">
+		<xs:attribute name="keycode" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="[0-9]"/>
+					<xs:pattern value="[A-Z]"/>
+					<xs:pattern value="SPACE"/>
+					<xs:pattern value="UP"/>
+					<xs:pattern value="DOWN"/>
+					<xs:pattern value="LEFT"/>
+					<xs:pattern value="RIGHT"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="display_name" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="DPad">
+		<xs:sequence maxOccurs="4">
+			<xs:element name="Button" type="Button"/>
+		</xs:sequence>
+		<xs:attribute name="position" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="left"/>
+					<xs:enumeration value="right"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="ButtonBar">
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="Button" type="Button"/>
+		</xs:sequence>
+		<xs:attribute name="position" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="left"/>
+					<xs:enumeration value="right"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+</xs:schema>

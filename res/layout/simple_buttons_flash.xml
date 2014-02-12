@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout android:id="@+id/RelativeLayout01" android:layout_width="fill_parent" android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+
+<RelativeLayout android:layout_width="wrap_content" android:id="@+id/RelativeLayout02" android:layout_height="wrap_content" android:layout_alignParentLeft="true">
+
+
+
+<ViewStub android:layout_toLeftOf="@+id/webview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/left_dpad" android:layout="@layout/dpad"></ViewStub><LinearLayout android:layout_width="wrap_content" android:id="@+id/left_button_bar" android:orientation="vertical" android:layout_alignParentBottom="true" android:layout_height="wrap_content"></LinearLayout></RelativeLayout><RelativeLayout android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/RelativeLayout03" android:layout_alignParentRight="true"><ViewStub android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout="@layout/dpad" android:id="@+id/right_dpad"></ViewStub><LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_alignParentBottom="true" android:id="@+id/right_button_bar"></LinearLayout></RelativeLayout><WebView android:layout_height="fill_parent" android:layout_width="fill_parent" android:id="@+id/webview" android:layout_toRightOf="@id/RelativeLayout02" android:layout_toLeftOf="@id/RelativeLayout03"></WebView>
+
+
+
+
+
+
+</RelativeLayout>

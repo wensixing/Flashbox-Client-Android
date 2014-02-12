@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_height="fill_parent" android:orientation="vertical" android:layout_width="fill_parent">
+<TextView android:layout_height="wrap_content" android:layout_width="fill_parent" android:gravity="center_horizontal" android:background="#dbecf5" android:text="@string/game_store_title" android:textSize="20dip"></TextView><FrameLayout android:layout_height="fill_parent" android:layout_width="fill_parent"><ListView android:layout_width="fill_parent" android:layout_height="fill_parent" android:id="@+id/list_view">
+
+</ListView><LinearLayout android:layout_height="fill_parent" android:layout_width="fill_parent" android:background="#FFFFFFFF" android:gravity="center_horizontal|center_vertical" android:id="@+id/loading" android:visibility="visible"><ProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dip"></ProgressBar>
+<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/now_loading" android:textSize="24dip"></TextView>
+</LinearLayout></FrameLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content">
+<TextView android:id="@+id/TextView01" android:layout_height="wrap_content" android:layout_width="fill_parent" android:background="#dbecf5" android:text="@string/game_center" android:gravity="center_horizontal" android:textSize="20dip"></TextView>
+<Button android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_width="fill_parent" android:text="@string/game_store_title" android:id="@+id/game_store"></Button><FrameLayout android:id="@+id/FrameLayout01" android:layout_below="@+id/TextView01" android:layout_height="fill_parent" android:layout_width="fill_parent" android:layout_above="@id/game_store"><ListView android:layout_height="fill_parent" android:layout_width="fill_parent" android:id="@+id/list_view">
+</ListView><TextView android:text="@string/no_game" android:background="#FFFFFF" android:layout_height="fill_parent" android:layout_width="fill_parent" android:gravity="center_horizontal|center_vertical" android:id="@+id/no_game"></TextView>
+</FrameLayout>
+
+</RelativeLayout>

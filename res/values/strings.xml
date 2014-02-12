@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">闪游盒子</string>
+    <string name="game_store_title">游戏下载中心</string>
+    <string name="now_loading">正在载入...</string>
+    <string name="download">下载</string>
+    <string name="cancel_download">取消下载</string>
+    <string name="download_again">重新下载</string>
+    <string name="play_game">开始游戏</string>
+    <string name="file_size">游戏大小</string>
+    <string name="description">游戏简介</string>
+    <string name="status_prepare">正在准备下载...</string>
+    <string name="status_failed">下载失败!</string>
+    <string name="status_finish">下载完成!</string>
+    <string name="game_center">游戏中心</string>
+    <string name="status_downloading">正在下载: %d%%</string>
+    <string name="no_game">尚未安装游戏，下载请点击 游戏下载中心。</string>
+    
+<string-array name="main_on_long_click"><item>开始游戏</item>
+<item>卸载游戏</item>
+<item>取消操作</item>
+</string-array>
+<string name="main_on_long_click">选择操作</string>
+</resources>
